@@ -1,43 +1,127 @@
 import React from "react";
 import "./Sidebar.css";
-import { MdAdd } from "react-icons/md";
+import {
+  MdAdd,
+  MdArticle,
+  MdDescription,
+  MdHome,
+  MdOutlineIosShare,
+  MdCloudDownload,
+} from "react-icons/md";
+import { FaTrash } from "react-icons/fa";
+import { Link, useMatch } from "react-router-dom";
 
 type IndexProps = {
   routeName: string;
+  path: string;
+  icon: Object;
 };
 
-const Index = ({ routeName }: IndexProps) => {
+const Index = ({ icon, path, routeName }: IndexProps) => {
+  const match = useMatch(path);
+  console.log(match);
   return (
-    <li>
-      <a href="/#">
-        <div
-          style={{
-            width: "15px",
-            height: "15px",
-            border: "1px solid #FFFFFF",
-          }}
-        />
+    <li className="wrapper-list">
+      <Link
+        to={path}
+        className={match ? "nav-link active-nav-link" : "nav-link"}
+      >
+        {icon}
         <span className="route-name">{routeName}</span>
-      </a>
+      </Link>
     </li>
   );
 };
 
-type SidebarProps = {
-  className: string;
-};
-
-export const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = () => {
   const listIndex = [
-    { id: 1, routeName: "Home" },
-    { id: 2, routeName: "My Files" },
-    { id: 3, routeName: "Recent Files" },
-    { id: 4, routeName: "Shared Field" },
-    { id: 5, routeName: "Field Request" },
-    { id: 6, routeName: "Trash" },
+    {
+      id: 1,
+      routeName: "Home",
+      path: "/",
+      icon: (
+        <MdHome
+          style={{
+            width: "15px",
+            height: "15px",
+            color: " #FFFFFF",
+          }}
+        />
+      ),
+    },
+    {
+      id: 2,
+      routeName: "My Files",
+      path: "/my-files",
+      icon: (
+        <MdArticle
+          style={{
+            width: "15px",
+            height: "15px",
+            color: " #FFFFFF",
+          }}
+        />
+      ),
+    },
+    {
+      id: 3,
+      routeName: "Recent Files",
+      path: "/recent-files",
+      icon: (
+        <MdDescription
+          style={{
+            width: "15px",
+            height: "15px",
+            color: " #FFFFFF",
+          }}
+        />
+      ),
+    },
+    {
+      id: 4,
+      routeName: "Shared Field",
+      path: "/shared-field",
+      icon: (
+        <MdOutlineIosShare
+          style={{
+            width: "15px",
+            height: "15px",
+            color: " #FFFFFF",
+          }}
+        />
+      ),
+    },
+    {
+      id: 5,
+      routeName: "Field Request",
+      path: "/field-request",
+      icon: (
+        <MdCloudDownload
+          style={{
+            width: "15px",
+            height: "15px",
+            color: " #FFFFFF",
+          }}
+        />
+      ),
+    },
+    {
+      id: 6,
+      routeName: "Trash",
+      path: "/trash",
+      icon: (
+        <FaTrash
+          style={{
+            width: "15px",
+            height: "15px",
+            color: " #FFFFFF",
+          }}
+        />
+      ),
+    },
   ];
   return (
-    <div className={`sidebar-wrapper ${className}`}>
+    <div className="sidebar-wrapper">
       <div>
         <div
           style={{
@@ -53,7 +137,12 @@ export const Sidebar = ({ className }: SidebarProps) => {
         ></div>
         <ul className="nav-list">
           {listIndex.map((index) => (
-            <Index key={index.id} routeName={index.routeName} />
+            <Index
+              key={index.id}
+              icon={index.icon}
+              path={index.path}
+              routeName={index.routeName}
+            />
           ))}
         </ul>
       </div>

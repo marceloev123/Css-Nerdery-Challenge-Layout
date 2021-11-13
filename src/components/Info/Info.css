@@ -12,9 +12,11 @@
   margin-right: 16px;
   margin-top: 25px;
   background-color: white;
-  height: 36px;
+  height: 24px;
   padding: 9px;
   border-radius: 5px;
+  align-items: center;
+  gap: 16px;
 }
 
 .display-recent {

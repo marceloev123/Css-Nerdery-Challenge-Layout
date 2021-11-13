@@ -8,7 +8,6 @@ type CardsProps = {
 };
 
 const Cards = ({ id, title, createdDate }: CardsProps) => {
-  console.log(id);
   return (
     <div className="shared-card-container">
       <div
