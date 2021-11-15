@@ -82,3 +82,38 @@
   justify-content: center;
   align-items: center;
 }
+.more-space-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width:80%;
+    margin: auto;
+    background-color: white;
+    border-radius: 18px;
+
+}
+
+
+.linear-div {
+   
+    height: 72px;
+    margin: 16px 40px 24px 40px;
+    border-radius: 11px;
+    background: linear-gradient(270deg, #689EF8 0%, #FF6860 56.25%, #FF9F00 100%)
+}
+
+.upgrade-btn{
+    height: 100%;
+    background-color: #FF9F00;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 10px 16px 10px 16px;
+    margin: 12px 40px 16px 40px;
+    
+}
