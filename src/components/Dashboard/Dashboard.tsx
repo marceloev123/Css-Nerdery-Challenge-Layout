@@ -197,6 +197,22 @@ export const Dashboard = ({ className }: DashboardProps) => {
           />
         ))}
       </section>
+      <section>
+        <div className="more-space-section">
+          <div className="linear-div"></div>
+          <h3
+            style="font-size: 12px; line-height: 14px; margin-top: 0; margin-bottom: 6px;"
+          >
+            Buy more space now!
+          </h3>
+          <span
+            style="font-size: 8px; line-height: 9px; letter-spacing: 0.05em; font-style: normal; font-weight: normal; color: #858A9D;"
+            >Upgrade to cloud premium</span
+          >
+
+          <button className="upgrade-btn">Upgrade Account!</button>
+        </div>
+      </section>
     </div>
   );
 };
