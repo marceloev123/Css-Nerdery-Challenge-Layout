@@ -3,41 +3,112 @@
   width: 100%;
   background-color: white;
   display: flex;
+  justify-content: space-between;
 }
+
+.search-wrapper {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+
 
 .search-bar {
   display: flex;
-  flex-basis: 100%;
+  flex-basis: 90%;
   margin-left: 16px;
   margin-right: 16px;
-  margin-top: 25px;
+
   background-color: white;
   height: 24px;
   padding: 9px;
   border-radius: 5px;
   align-items: center;
+  max-height: 29px;
   gap: 16px;
 }
 
 .display-recent {
-  background-color: #ccc;
-  /* background-color: #F5F6FC; */
+  background-color: #f5f6fc;
   margin: 0 auto;
   width: 94%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media only screen and (min-width: 480px) {
   .display-recent {
-    background-color: #ccc;
-    /* background-color: #F5F6FC; */
+    background-color: #f5f6fc;
     width: 94%;
+  }
+  .toggle-container {
+    height: 32px;
+    width: 32px;
+    background: white;
+    align-items: center;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    justify-content: center;
+  }
+  .search-bar {
+    display: flex;
+    flex-basis: 80%;
+    margin-left: 16px;
+    margin-right: 16px;
+    background-color: white;
+    height: 24px;
+    padding: 9px;
+    border-radius: 5px;
+    align-items: center;
+    max-height: 29px;
+    gap: 16px;
   }
 }
 @media only screen and (min-width: 768px) {
   .display-recent {
-    background-color: #ccc;
-    /* background-color: #F5F6FC; */
+    background-color: #f5f6fc;
+    height: 100%;
+  }
+ 
+  .search-bar {
+    display: flex;
+    flex-basis: 80%;
+    margin-left: 16px;
+    margin-right: 16px;
+    background-color: white;
+    height: 24px;
+    padding: 9px;
+    border-radius: 5px;
+    align-items: center;
+    max-height: 29px;
+    gap: 16px;
+  }
+}
 
-    width: 94%;
+@media only screen and (min-width: 1024px) {
+  .display-recent {
+    background-color: #f5f6fc;
+    height: 100%;
+  }
+  
+  .search-bar {
+    display: flex;
+    flex-basis: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 25px;
+    background-color: white;
+    height: 24px;
+    padding: 9px;
+    border-radius: 5px;
+    align-items: center;
+    max-height: 29px;
+    gap: 16px;
   }
 }

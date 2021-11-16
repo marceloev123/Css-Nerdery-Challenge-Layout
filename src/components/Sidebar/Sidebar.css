@@ -1,12 +1,52 @@
 .sidebar-wrapper {
   min-height: 100vh;
-  width: 20%;
-
-  max-width: 250px;
+  flex-basis: 20%;
+  min-width: 250px;
   background-color: #343951;
+  position: fixed;
   display: flex;
+  visibility: hidden;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 10000;
+  -webkit-transform: translate3d(-100%, 0px, 0px);
+  transform: translate3d(-100%, 0px, 0px);
+  visibility: visible;
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+}
+.sidebar-wrapper-open {
+  visibility: visible;
+  flex-direction: column;
+  justify-content: space-between;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.toggle {
+  height: 32px;
+  width: 32px;
+  background: #343951;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  margin: 8px;
+  cursor: pointer;
+  float: left;
+}
+
+.close-button {
+  height: 32px;
+  width: 32px;
+  border: 1px solid white;
+  background: #343951;
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  margin: 8px;
+  cursor: pointer;
 }
 
 .nav-list {
@@ -67,6 +107,7 @@
   color: white;
   align-items: center;
   text-align: center;
+  margin-top: 24px;
 }
 .btn-text {
   margin-left: 14px;
@@ -87,4 +128,72 @@
   margin-left: auto;
   align-items: center;
   justify-content: center;
+}
+
+.pop-over {
+  min-height: 112px;
+  max-width: 116px;
+  text-decoration: none;
+  padding: 16px;
+  background-color: #464c61;
+  border-radius: 9px;
+  margin: auto;
+}
+
+.pop-over::before {
+  border-top: 7px solid #464c61;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  bottom: 74px;
+  content: "";
+  display: block;
+  left: 32%;
+  margin-left: -7px;
+  position: absolute;
+}
+
+.pop-over-list {
+  margin-block-start: 0;
+  padding-left: 0;
+  color: white;
+  list-style: none;
+  font-size: 10px;
+  line-height: 12px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 10px;
+}
+.pop-over-list > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (min-width: 480px) {
+  .sidebar-wrapper {
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10000;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .sidebar-wrapper {
+    position: unset;
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    justify-content: space-between;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+  }
+  .toggle {
+    display: none;
+  }
+  .close-button {
+    display: none;
+  }
 }

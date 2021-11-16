@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 import {
   MdAdd,
   MdArticle,
+  MdClose,
   MdDescription,
   MdHome,
+  MdMenu,
   MdOutlineIosShare,
   MdCloudDownload,
 } from "react-icons/md";
@@ -19,7 +21,7 @@ type IndexProps = {
 
 const Index = ({ icon, path, routeName }: IndexProps) => {
   const match = useMatch(path);
-  console.log(match);
+
   return (
     <li className="wrapper-list">
       <Link
@@ -27,13 +29,76 @@ const Index = ({ icon, path, routeName }: IndexProps) => {
         className={match ? "nav-link active-nav-link" : "nav-link"}
       >
         {icon}
-        <span className="route-name">{routeName}</span>
+        <text className="route-name">{routeName}</text>
       </Link>
     </li>
   );
 };
 
+const Popover = () => {
+  return (
+    <div className="pop-over">
+      <ul className="pop-over-list">
+        <li>
+          <div
+            style={{
+              height: "15px",
+              width: "15px",
+              border: "1px solid white",
+            }}
+          ></div>
+          <text>Upload files</text>
+        </li>
+        <li>
+          <div
+            style={{
+              height: "15px",
+              width: "15px",
+              border: "1px solid white",
+            }}
+          ></div>
+          <text>Upload folder</text>
+        </li>
+        <li>
+          <div
+            style={{
+              height: "15px",
+              width: "15px",
+              border: "1px solid white",
+            }}
+          ></div>
+          <text>Upload files</text>
+        </li>
+        <li>
+          <div
+            style={{
+              height: "15px",
+              width: "15px",
+              border: "1px solid white",
+            }}
+          ></div>
+          <text>New folder</text>
+        </li>
+        <li>
+          <div
+            style={{
+              height: "15px",
+              width: "15px",
+              border: "1px solid white",
+            }}
+          ></div>
+          <text>Home</text>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+
+
 export const Sidebar = () => {
+  const [openSidebar, setOpenSidebar] = useState(false);
+  const [showPopover, setShowPopover] = useState(false);
   const listIndex = [
     {
       id: 1,
@@ -121,39 +186,70 @@ export const Sidebar = () => {
     },
   ];
   return (
-    <div className="sidebar-wrapper">
-      <div>
-        <div
-          style={{
-            width: "74px",
-            height: "21px",
-            marginTop: "36px",
-            marginLeft: "32px",
-            marginBottom: "51px",
-            borderRadius: "5px",
-            background:
-              "linear-gradient(270deg, #689EF8 0%, #FF6860 56.25%, #FF9F00 100%)",
-          }}
-        ></div>
-        <ul className="nav-list">
-          {listIndex.map((index) => (
-            <Index
-              key={index.id}
-              icon={index.icon}
-              path={index.path}
-              routeName={index.routeName}
-            />
-          ))}
-        </ul>
-      </div>
-
-      <div className="create-section">
-        <button className="btn-container">
-          <p className="btn-text">Create New</p>
-          <div className="btn-icon">
-            <MdAdd />
+    <div>
+      <button className="toggle" onClick={() => setOpenSidebar(true)}>
+        <MdMenu style={{ color: "white", margin: "auto", display: "flex" }} />
+      </button>
+      <div
+        className={
+          openSidebar
+            ? "sidebar-wrapper sidebar-wrapper-open"
+            : "sidebar-wrapper"
+        }
+      >
+        <div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <div
+              style={{
+                width: "74px",
+                height: "21px",
+                marginTop: "36px",
+                marginLeft: "32px",
+                marginBottom: "51px",
+                borderRadius: "5px",
+                background:
+                  "linear-gradient(270deg, #689EF8 0%, #FF6860 56.25%, #FF9F00 100%)",
+              }}
+            ></div>
+            <button
+              className="close-button"
+              onClick={() => setOpenSidebar(false)}
+            >
+              <MdClose
+                style={{ color: "white", margin: "auto", display: "flex" }}
+              />
+            </button>
           </div>
-        </button>
+          <ul className="nav-list">
+            {listIndex.map((index) => (
+              <Index
+                key={index.id}
+                icon={index.icon}
+                path={index.path}
+                routeName={index.routeName}
+              />
+            ))}
+          </ul>
+        </div>
+
+        <div className="create-section">
+          {showPopover ? <Popover /> : null}
+
+          <button
+            className="btn-container"
+            onClick={() => setShowPopover(!showPopover)}
+          >
+            <p className="btn-text">Create New</p>
+            <div className="btn-icon">
+              <MdAdd />
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   );

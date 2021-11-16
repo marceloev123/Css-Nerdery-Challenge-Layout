@@ -50,10 +50,10 @@ h2 {
     grid-template-columns: repeat(12, 1fr);
   }
   .display-col {
-    grid-column: 1/8;
+    grid-column: 1/9;
   }
 
   .dashboard-col {
-    grid-column: 8/13;
+    grid-column: 9/13;
   }
 }

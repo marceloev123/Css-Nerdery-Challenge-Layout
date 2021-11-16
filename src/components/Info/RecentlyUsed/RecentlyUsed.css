@@ -1,23 +1,44 @@
-
 .recent-container {
   padding: 16px 16px 0 16px;
-  margin-top: 9px;
 }
 
 .cards-container {
   display: flex;
   flex-direction: row;
   flex-flow: row wrap;
+  justify-content: center;
+  gap: 16px;
 }
 
 .card-container {
   background-color: white;
-  height: 133px;
-  margin: 13px;
+  height: 132px;
   border-radius: 12px;
-  padding-left: 13px;
-  flex: 1 0 20%;
+  padding: 13px;
+  max-width: 176px;
+  flex-basis: 68%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
   box-shadow: 0px 4px 16px rgba(58, 58, 58, 0.07);
+}
+
+@media only screen and (min-width: 408px) {
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .card-container {
+    background-color: white;
+    height: 133px;
+    flex-basis: 44%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -30,6 +51,8 @@
   .card-container {
     background-color: white;
     height: 133px;
-    margin-left: 13px;
+    flex-basis: 20%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

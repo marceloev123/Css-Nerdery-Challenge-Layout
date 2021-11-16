@@ -1,6 +1,6 @@
 import React from "react";
 import "./Dashboard.css";
-
+import border from "../../assets/border.svg";
 interface DashboardProps {
   className: string;
 }
@@ -47,7 +47,7 @@ const DocumentComponent = ({
         }}
       >
         <h3>{name}</h3>
-        <span
+        <text
           style={{
             fontSize: "9px",
             lineHeight: "9px",
@@ -62,12 +62,12 @@ const DocumentComponent = ({
           }}
         >
           {filesAmount} files
-        </span>
+        </text>
       </div>
     </div>
     <div className="space-wrapper">
       {" "}
-      <span
+      <text
         style={{
           fontSize: "9px",
           lineHeight: "9px",
@@ -78,7 +78,7 @@ const DocumentComponent = ({
         }}
       >
         {space} GB
-      </span>
+      </text>
     </div>
   </div>
 );
@@ -163,15 +163,15 @@ export const Dashboard = ({ className }: DashboardProps) => {
         <div>
           <h2>Storage</h2>
           <div className="circle">
-            <div className="border"></div>
+            <img alt="border" className="border" src={border}></img>
 
             <div className="internal-circle">
               <div>85%</div>
-              <span>Used</span>
+              <text>Used</text>
             </div>
           </div>
           <div className="caption">
-            <span
+            <text
               style={{
                 fontSize: "9px",
                 lineHeight: "9px",
@@ -182,7 +182,7 @@ export const Dashboard = ({ className }: DashboardProps) => {
               }}
             >
               420.2 GB of 500 GB used
-            </span>
+            </text>
           </div>
         </div>
       </section>
@@ -197,18 +197,31 @@ export const Dashboard = ({ className }: DashboardProps) => {
           />
         ))}
       </section>
-      <section>
+      <section className="buy-section">
         <div className="more-space-section">
           <div className="linear-div"></div>
           <h3
-            style="font-size: 12px; line-height: 14px; margin-top: 0; margin-bottom: 6px;"
+            style={{
+              fontSize: "12px",
+              lineHeight: "14px",
+              marginTop: "0px",
+              marginBottom: "6px",
+            }}
           >
             Buy more space now!
           </h3>
-          <span
-            style="font-size: 8px; line-height: 9px; letter-spacing: 0.05em; font-style: normal; font-weight: normal; color: #858A9D;"
-            >Upgrade to cloud premium</span
+          <text
+            style={{
+              fontSize: "8px",
+              lineHeight: "9px",
+              letterSpacing: "0.05em",
+              fontStyle: "normal",
+              fontWeight: "normal",
+              color: " #858A9D",
+            }}
           >
+            Upgrade to cloud premium
+          </text>
 
           <button className="upgrade-btn">Upgrade Account!</button>
         </div>

@@ -95,7 +95,7 @@ const UsedCards = ({ id, title, createdDate }: UseCardsProps) => {
                 alignItems: "center",
               }}
             >
-              <span style={{ color: "#343951", fontSize: "8px" }}>+3</span>
+              <text style={{ color: "#343951", fontSize: "8px" }}>+3</text>
             </div>
           )}
         </div>

@@ -1,6 +1,10 @@
 .wrapper-dashboard {
+  height: 100vh;
   width: 100%;
   background-color: #f5f6fc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .user-info {
@@ -30,17 +34,13 @@
 
 .border {
   position: absolute;
+  margin: auto;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background: transparent;
   border-radius: 50%;
-  border: 12px solid;
-  border-right-color: #ff9f00;
-  border-top-color: #4ac29d;
-  border-bottom-color: #bcbeca;
-  border-left-color: #689ff8;
 }
 
 .border-right-top {
@@ -69,8 +69,9 @@
 
 .documents-section {
   margin-top: 16p;
-  margin-left: 32px;
-  margin-right: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 
 .space-wrapper {
@@ -82,38 +83,51 @@
   justify-content: center;
   align-items: center;
 }
-.more-space-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width:80%;
-    margin: auto;
-    background-color: white;
-    border-radius: 18px;
+.buy-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  width: 70%;
+  border-radius: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
 
+  padding: 16px;
+
+  margin-bottom: 32px;
 }
 
+.more-space-section {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 18px;
+  gap: 8px;
+}
 
 .linear-div {
-   
-    height: 72px;
-    margin: 16px 40px 24px 40px;
-    border-radius: 11px;
-    background: linear-gradient(270deg, #689EF8 0%, #FF6860 56.25%, #FF9F00 100%)
+  min-height: 72px;
+  max-width: 120px;
+  border-radius: 11px;
+  background: linear-gradient(270deg, #689ef8 0%, #ff6860 56.25%, #ff9f00 100%);
 }
 
-.upgrade-btn{
-    height: 100%;
-    background-color: #FF9F00;
-    justify-content: center;
-    align-items: center;
-    border-radius: 7px;
-    border: none;
-    color: white;
-    font-size: 10px;
-    line-height: 12px;
-    padding: 10px 16px 10px 16px;
-    margin: 12px 40px 16px 40px;
-    
+.upgrade-btn {
+  max-height: 32px;
+  width: 116px;
+  background-color: #ff9f00;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  font-size: 10px;
+  line-height: 12px;
+  padding: 10px 16px 10px 16px;
+  margin: auto;
 }
