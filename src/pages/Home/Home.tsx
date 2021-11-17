@@ -6,7 +6,7 @@ export const Home = () => {
   return (
     <div className="wrapper">
       <Info className="display-col" />
-      <Dashboard className="dashboard-col" />
+      <Dashboard />
     </div>
   );
 };

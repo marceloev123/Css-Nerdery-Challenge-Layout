@@ -1,14 +1,10 @@
 import React from "react";
 import "./Dashboard.css";
+import "../../pages/Home/Home.css";
 import border from "../../assets/border.svg";
 import { Document } from "./Document/Document";
 
-
-interface DashboardProps {
-  className: string;
-}
-
-export const Dashboard = ({ className }: DashboardProps) => {
+export const Dashboard = () => {
   const documents = [
     {
       id: 1,
@@ -41,15 +37,9 @@ export const Dashboard = ({ className }: DashboardProps) => {
   ];
 
   return (
-    <div className={`wrapper-dashboard ${className}`}>
+    <div className="wrapper-dashboard dashboard-col">
       <section className="user-info">
-        <div
-          style={{
-            display: "flex",
-            gap: "16px",
-            padding: "8px 16px 8px 16px",
-          }}
-        >
+        <div className="user-info-left-data">
           <div
             style={{
               width: "16px",
@@ -65,14 +55,7 @@ export const Dashboard = ({ className }: DashboardProps) => {
             }}
           ></div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "16px",
-            padding: "8px 16px 8px 16px",
-          }}
-        >
+        <div className="user-info-right-data ">
           <div>Name</div>
           <div
             style={{
@@ -95,19 +78,8 @@ export const Dashboard = ({ className }: DashboardProps) => {
               <text>Used</text>
             </div>
           </div>
-          <div className="caption">
-            <text
-              style={{
-                fontSize: "9px",
-                lineHeight: "9px",
-                letterSpacing: "0.05em",
-                fontStyle: "normal",
-                fontWeight: "normal",
-                color: "#858A9D",
-              }}
-            >
-              420.2 GB of 500 GB used
-            </text>
+          <div style={{ textAlign: "center" }}>
+            <text className="storage-caption">420.2 GB of 500 GB used</text>
           </div>
         </div>
       </section>
