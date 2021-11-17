@@ -1,0 +1,39 @@
+.document-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #e0e7f1;
+  gap: 8px;
+}
+
+.document-info-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+
+.document-files-amount {
+  font-size: 9px;
+  line-height: 9px;
+  letter-spacing: 0.05em;
+  font-size: normal;
+  font-weight: normal;
+  color: #858a9d;
+  margin-top: 4px;
+  margin-left: -22px;
+  height: 100%;
+  align-content: center;
+}
+
+.document-storage {
+  font-size: 9px;
+  line-height: 9px;
+  letter-spacing: 0.05em;
+  font-style: normal;
+  font-weight: normal;
+  color: #343951;
+  text-align: center;
+  margin: 2px;
+}

@@ -1,90 +1,12 @@
 import React from "react";
 import "./Dashboard.css";
 import border from "../../assets/border.svg";
+import { Document } from "./Document/Document";
+
+
 interface DashboardProps {
   className: string;
 }
-
-interface DocumentComponentProps {
-  id: number;
-  color: string;
-  name: string;
-  filesAmount: number;
-  space: number;
-}
-
-const DocumentComponent = ({
-  id,
-  color,
-  name,
-  filesAmount,
-  space,
-}: DocumentComponentProps) => (
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      padding: "16px",
-      borderBottom: "1px solid #E0E7F1",
-      gap:"8px"
-    }}
-  >
-    <div style={{ display: "flex", gap: "8px" }}>
-      <div
-        style={{
-          height: "28px",
-          width: "28px",
-          borderRadius: "8px",
-          background: color,
-        }}
-      ></div>
-      <div
-        style={{
-          alignItems: "center",
-          display: "flex",
-          justifyContent: "left",
-          flexDirection: "column",
-        }}
-      >
-        <h3>{name}</h3>
-        <text
-          style={{
-            fontSize: "9px",
-            lineHeight: "9px",
-            letterSpacing: "0.05em",
-            fontStyle: "normal",
-            fontWeight: "normal",
-            color: "#858A9D",
-            marginTop: "4px",
-            marginLeft: "-22px",
-            height: "100%",
-            alignContent: "center",
-          }}
-        >
-          {filesAmount} files
-        </text>
-      </div>
-    </div>
-    <div className="space-wrapper">
-      {" "}
-      <text
-        style={{
-          fontSize: "9px",
-          lineHeight: "9px",
-          letterSpacing: "0.05em",
-          fontStyle: "normal",
-          fontWeight: "normal",
-          color: "#343951",
-          textAlign:"center",
-          margin:"2px"
-        }}
-      >
-        {space} GB
-      </text>
-    </div>
-  </div>
-);
 
 export const Dashboard = ({ className }: DashboardProps) => {
   const documents = [
@@ -93,28 +15,28 @@ export const Dashboard = ({ className }: DashboardProps) => {
       color: "#FF9F00",
       name: "Documents",
       filesAmount: 720,
-      space: 200,
+      storage: 200,
     },
     {
       id: 2,
       color: "#689FF8",
       name: "Documents",
       filesAmount: 720,
-      space: 125,
+      storage: 125,
     },
     {
       id: 3,
       color: "#4AC29D",
       name: "Documents",
       filesAmount: 720,
-      space: 75,
+      storage: 75,
     },
     {
       id: 4,
       color: "#BCBECA",
       name: "Documents",
       filesAmount: 720,
-      space: 50,
+      storage: 50,
     },
   ];
 
@@ -190,14 +112,8 @@ export const Dashboard = ({ className }: DashboardProps) => {
         </div>
       </section>
       <section className="documents-section">
-        {documents.map((document) => (
-          <DocumentComponent
-            id={document.id}
-            color={document.color}
-            filesAmount={document.filesAmount}
-            space={document.space}
-            name={document.name}
-          />
+        {documents.map(document => (
+          <Document document={document} />
         ))}
       </section>
       <section className="buy-section">
