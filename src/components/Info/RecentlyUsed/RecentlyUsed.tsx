@@ -138,7 +138,7 @@ export const RecentlyUsed = () => {
     { id: 1, title: "App Project", createdDate: "20.02.2020" },
     {
       id: 2,
-      title: "Project: fitbit",
+      title: "Project: Fitbit",
       createdDate: "28.02.2020",
     },
     {

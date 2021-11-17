@@ -1,8 +1,10 @@
 .wrapper-dashboard {
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
   background-color: #f5f6fc;
   display: flex;
+  width: 96%;
+
+  justify-self: center;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -130,4 +132,10 @@
   line-height: 12px;
   padding: 10px 16px 10px 16px;
   margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper-dashboard {
+    width: 100%;
+  }
 }

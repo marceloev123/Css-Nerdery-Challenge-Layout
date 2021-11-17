@@ -12,7 +12,7 @@
 
 .card-container {
   background-color: white;
-  height: 132px;
+  height: 128px;
   border-radius: 12px;
   padding: 13px;
   max-width: 176px;
@@ -34,7 +34,7 @@
   }
   .card-container {
     background-color: white;
-    height: 133px;
+    height: 128px;
     flex-basis: 44%;
     margin-left: auto;
     margin-right: auto;
@@ -50,7 +50,7 @@
   }
   .card-container {
     background-color: white;
-    height: 133px;
+    height: 136px;
     flex-basis: 20%;
     margin-left: 0;
     margin-right: 0;

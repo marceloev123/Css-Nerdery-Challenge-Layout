@@ -57,7 +57,7 @@
 
 .wrapper-list {
   list-style: none;
-  height: 68px;
+  height: 64px;
 }
 
 .nav-link {
@@ -71,7 +71,7 @@
 
 .active-nav-link:before {
   width: 7px;
-  height: 68px;
+  height: 56px;
   border-radius: 0 7px 7px 0;
   background-color: #fff;
   content: "";
@@ -96,8 +96,8 @@
 .create-section button.btn-container {
   display: flex;
   flex-flow: row;
-  height: 30px;
-  width: 116px;
+  height: 40px;
+  width: 144px;
   margin-left: 16%;
   margin: auto;
   margin-bottom: 27px;
@@ -110,8 +110,8 @@
   margin-top: 24px;
 }
 .btn-text {
-  margin-left: 14px;
-  font-size: 10px;
+  margin-left: 8px;
+  font-size: 12px;
   line-height: 12px;
   font-style: normal;
   font-weight: normal;
@@ -180,9 +180,9 @@
     z-index: 10000;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1024px) {
   .sidebar-wrapper {
-    position: unset;
+    position:static;
     display: flex;
     flex-direction: column;
     visibility: visible;
