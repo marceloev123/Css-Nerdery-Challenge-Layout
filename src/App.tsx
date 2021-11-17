@@ -5,7 +5,7 @@ import { Sidebar } from "./components/Sidebar/Sidebar";
 
 function App() {
   return (
-    <div style={{ display: "flex", flexGrow: 1 }}>
+    <div style={{ display: "flex", flexGrow: 1, maxHeight:"100vh" }}>
       <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
