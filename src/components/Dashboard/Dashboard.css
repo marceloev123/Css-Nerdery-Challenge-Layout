@@ -1,9 +1,8 @@
 .wrapper-dashboard {
-  min-height: 100vh;
+  height: 100%;
   background-color: #f5f6fc;
   display: flex;
   width: 96%;
-
   justify-self: center;
   flex-direction: column;
   justify-content: space-between;
@@ -12,13 +11,13 @@
 .user-info {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  border-top: 1px solid #e0e7f1;
   border-bottom: 1px solid #e0e7f1;
   align-items: center;
 }
 
 .storage-section {
-  padding: 16px 24px 32px 36px;
+  padding: 0 16px 16px 16px;
   display: flex;
   flex-flow: column;
 }
@@ -28,7 +27,7 @@
   width: 139px;
   position: relative;
   display: flex;
-  padding: 12px;
+  padding: 8px;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -94,11 +93,9 @@
   border-radius: 18px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
-
+  margin-top: 4%;
+  margin-bottom: 4%;
   padding: 16px;
-
-  margin-bottom: 32px;
 }
 
 .more-space-section {
@@ -113,7 +110,7 @@
 }
 
 .linear-div {
-  min-height: 72px;
+  height: 56px;
   max-width: 120px;
   border-radius: 11px;
   background: linear-gradient(270deg, #689ef8 0%, #ff6860 56.25%, #ff9f00 100%);
@@ -137,5 +134,12 @@
 @media only screen and (min-width: 768px) {
   .wrapper-dashboard {
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .wrapper-dashboard {
+    width: 100%;
+    max-height: 100vh;
   }
 }
