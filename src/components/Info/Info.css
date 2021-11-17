@@ -1,5 +1,5 @@
 .display-content {
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: white;
   display: flex;
@@ -32,7 +32,7 @@
   background-color: #f5f6fc;
   margin: 0 auto;
   width: 96%;
-  min-height: 100vh;
+  height:100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -68,9 +68,6 @@
   }
 }
 @media only screen and (min-width: 768px) {
-  .display-content {
-    max-height: 100vh;
-  }
 
   .search-bar {
     display: flex;
@@ -88,9 +85,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .display-content {
-    max-height: 100vh;
-  }
+ 
   .search-bar {
     display: flex;
     flex-basis: 100%;
