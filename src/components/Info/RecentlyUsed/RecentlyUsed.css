@@ -1,5 +1,5 @@
 .recent-container {
-  padding: 16px 16px 0 16px;
+  padding: 0 16px 0 16px;
 }
 
 .cards-container {
@@ -12,7 +12,7 @@
 
 .card-container {
   background-color: white;
-  height: 128px;
+  height:100%;
   border-radius: 12px;
   padding: 13px;
   max-width: 176px;
@@ -34,7 +34,7 @@
   }
   .card-container {
     background-color: white;
-    height: 128px;
+  
     flex-basis: 44%;
     margin-left: auto;
     margin-right: auto;
@@ -50,7 +50,6 @@
   }
   .card-container {
     background-color: white;
-    height: 136px;
     flex-basis: 20%;
     margin-left: 0;
     margin-right: 0;
