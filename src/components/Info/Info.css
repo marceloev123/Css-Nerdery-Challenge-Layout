@@ -11,6 +11,7 @@
   gap: 16px;
   justify-content: center;
   align-items: center;
+  margin-top: 16px;
 }
 
 .search-bar {
@@ -18,7 +19,6 @@
   flex-basis: 90%;
   margin-left: 16px;
   margin-right: 16px;
-
   background-color: white;
   height: 24px;
   padding: 9px;
@@ -53,6 +53,7 @@
     display: flex;
     justify-content: center;
   }
+
   .search-bar {
     display: flex;
     flex-basis: 80%;
@@ -68,7 +69,9 @@
   }
 }
 @media only screen and (min-width: 768px) {
-
+  .display-recent{
+    height: 100%;
+  }
   .search-bar {
     display: flex;
     flex-basis: 80%;
@@ -85,13 +88,14 @@
 }
 
 @media only screen and (min-width: 1024px) {
- 
+  .display-recent{
+    max-height: 100vh;
+  }
   .search-bar {
     display: flex;
     flex-basis: 100%;
     margin-left: 16px;
-    margin-right: 16px;
-    margin-top: 25px;
+    margin-right: 16px;;
     background-color: white;
     height: 24px;
     padding: 9px;
