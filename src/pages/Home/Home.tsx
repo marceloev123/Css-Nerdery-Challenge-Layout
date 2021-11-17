@@ -5,7 +5,7 @@ import "./Home.css";
 export const Home = () => {
   return (
     <div className="wrapper">
-      <Info className="display-col" />
+      <Info />
       <Dashboard />
     </div>
   );

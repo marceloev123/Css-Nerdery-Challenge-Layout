@@ -1,21 +1,16 @@
 import React from "react";
 import "./Info.css";
+import "../../pages/Home/Home.css";
 import { RecentFiles } from "./RecentFiles/RecentFiles";
 import { RecentlyUsed } from "./RecentlyUsed/RecentlyUsed";
 import { SharedWithMe } from "./SharedWithMe/SharedWithMe";
 import { MdSearch } from "react-icons/md";
 
-
-type InfoProps = {
-  className: string;
-};
-
-export const Info = ({ className }: InfoProps) => {
+export const Info = () => {
   return (
-    <div className={`display-content ${className}`}>
+    <div className="display-content display-col">
       <div className="display-recent">
         <div className="search-wrapper">
-        
           <div className="search-bar">
             <MdSearch
               style={{
@@ -24,19 +19,7 @@ export const Info = ({ className }: InfoProps) => {
                 color: " #BCBECA",
               }}
             />
-            <input
-              style={{
-                color: "#BCBECA",
-                fontWeight: 400,
-                fontSize: "12px",
-                marginTop: "auto",
-                marginBottom: "auto",
-                border: "none",
-                width: "100%",
-                height: "100%",
-              }}
-              placeholder="Search"
-            ></input>
+            <input className=".search-bar-input" placeholder="Search"></input>
           </div>
         </div>
         <RecentlyUsed />
