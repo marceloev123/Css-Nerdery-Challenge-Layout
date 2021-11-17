@@ -27,9 +27,10 @@ const DocumentComponent = ({
       alignItems: "center",
       padding: "16px",
       borderBottom: "1px solid #E0E7F1",
+      gap:"8px"
     }}
   >
-    <div style={{ display: "flex", gap: "7px" }}>
+    <div style={{ display: "flex", gap: "8px" }}>
       <div
         style={{
           height: "28px",
@@ -75,6 +76,8 @@ const DocumentComponent = ({
           fontStyle: "normal",
           fontWeight: "normal",
           color: "#343951",
+          textAlign:"center",
+          margin:"2px"
         }}
       >
         {space} GB
@@ -122,7 +125,7 @@ export const Dashboard = ({ className }: DashboardProps) => {
           style={{
             display: "flex",
             gap: "16px",
-            padding: "36px 0px 32px 36px",
+            padding: "8px 16px 8px 16px",
           }}
         >
           <div
@@ -145,7 +148,7 @@ export const Dashboard = ({ className }: DashboardProps) => {
             display: "flex",
             alignItems: "center",
             gap: "16px",
-            padding: "32px 24px 24px 0px",
+            padding: "8px 16px 8px 16px",
           }}
         >
           <div>Name</div>
@@ -205,7 +208,6 @@ export const Dashboard = ({ className }: DashboardProps) => {
               fontSize: "12px",
               lineHeight: "14px",
               marginTop: "0px",
-              marginBottom: "6px",
             }}
           >
             Buy more space now!
